@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="/shared/scripts/cdn.socket.io_4.7.2_socket.io.js"></script>
+</head>
+<body>
+    <h1>Test Page</h1>
+    <button class="nobr bg3">Test2</button>
+    <div class="fcmc">
+        <span class="expand">
+            <input id="ExpandFonts" type="checkbox" checked>
+            <label for="ExpandFonts">Fonts<div class="icon"></div></label>
+            <div>
+                <fieldset onchange="FontChange()">
+                    <label for="FontSize">Font Size</label>
+                    <select name="font-size" id="FontSize">
+                        <option value=".5">.5</option>
+                        <option value=".75">.75</option>
+                        <option value="1" selected>1</option>
+                        <option value="1.25">1.25</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1.75">1.75</option>
+                        <option value="2.25">2.25</option>
+                        <option value="2.75">2.75</option>
+                        <option value="3.5">3.5</option>
+                        <option value="4.5">4.5</option>
+                    </select>
+                    <label for="FontWeight">Font Weight</label>
+                    <select name="font-weight" id="FontWeight">
+                        <option value="300">300</option>
+                        <option value="400" selected>400</option>
+                        <option value="500">500</option>
+                        <option value="600">600</option>
+                        <option value="700">700</option>
+                    </select>
+                </fieldset>
+                <div id="Fonts">
+                    <span class="f-anton">f-anton</span>
+                    <span class="f-bebas-neue">f-bebas-neue</span>
+                    <span class="f-dancing-script">f-dancing-script</span>
+                    <span class="f-open-sans">f-open-sans</span>
+                    <span class="f-oswald">f-oswald</span>
+                    <span class="f-pacifico">f-pacifico</span>
+                    <span class="f-pixelify-sans">f-pixelify-sans</span>
+                    <span class="f-rubik">f-rubik</span>
+                    <span class="f-young-serif">f-young-serif</span>
+                </div>
+            </div>
+        </span>
+        <span class="expand">
+            <input type="checkbox" name="ExpandElements" id="ExpandElements" checked>
+            <label for="ExpandElements">Elements<div class="icon"></div></label>
+            <div>
+                <div class="title">KeyValName</div>
+                <span class="keyval">
+                    <span>Key</span>
+                    <span>Val</span>
+                    <span>Key2</span>
+                    <span>Val2</span>
+                    <span>Key3</span>
+                    <span>Val3</span>
+                    <span>Key4</span>
+                    <span>Val4</span>
+                </span>
+            </div>
+        </span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+// MIXINS
+@use "../shared/styles/mixins/font-anton.scss" as *;
+@use "../shared/styles/mixins/font-bebas-neue.scss" as *;
+@use "../shared/styles/mixins/font-dancing-script.scss" as *;
+@use "../shared/styles/mixins/font-open-sans.scss" as *;
+@use "../shared/styles/mixins/font-oswald.scss" as *;
+@use "../shared/styles/mixins/font-pacifico.scss" as *;
+@use "../shared/styles/mixins/font-pixelify-sans.scss" as *;
+@use "../shared/styles/mixins/font-rubik.scss" as *;
+@use "../shared/styles/mixins/font-young-serif.scss" as *;
+@use "../shared/styles/mixins/paddings.scss" as *;
+@use "../shared/styles/mixins/corners.scss" as *;
+@use "../shared/styles/mixins/font-sizes.scss" as *;
+@use "../shared/styles/mixins/backgrounds.scss" as *;
+@use "../shared/styles/mixins/borders.scss" as *;
+
+// COLORS
+@use "../shared/styles/palette/1.scss" as *;
+
+// FONTS
+@use "../shared/styles/fonts/anton.scss" as *;
+@use "../shared/styles/fonts/bebas-neue.scss" as *;
+@use "../shared/styles/fonts/dancing-script.scss" as *;
+@use "../shared/styles/fonts/open-sans.scss" as *;
+@use "../shared/styles/fonts/oswald.scss" as *;
+@use "../shared/styles/fonts/pacifico.scss" as *;
+@use "../shared/styles/fonts/pixelify-sans.scss" as *;
+@use "../shared/styles/fonts/rubik.scss" as *;
+@use "../shared/styles/fonts/young-serif.scss" as *;
+
+// MECHANICS
+@use "../shared/styles/mechanics/expand.scss" as *;
+
+// HEADINGS
+@use "../shared/styles/names/headings.scss" as *;
+@use "../shared/styles/names/title.scss" as *;
+
+// BORDERS
+@use "../shared/styles/borders/outlines.scss" as *;
+
+// LISTS
+@use "../shared/styles/lists/keyval.scss" as *;
+
+:root {
+    --fs: 12px;
+    @media (max-width: 640px) {
+        --fs: 2vw;
+    }
+}
+
+body {
+    @include palette1;
+    @include font-open-sans;
+    font-size: 0;
+    margin: 0;
+}
+
+label {
+    @include paddingS;
+    @include fs;
+}
+
+button {
+    @include paddingS;
+    @include cornerS;
+    @include fs09;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+}
+
+
+//flex,column,center,center
+.fcmc {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+}
+
+.i-name {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+}
+
+.line::after {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border1);
+}
+
+
+#Fonts {
+    @include font-anton;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
