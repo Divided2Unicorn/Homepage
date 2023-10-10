@@ -1,5 +1,5 @@
 const socket = io( "wss://localhost/", { transports: ["websocket"]} );
-io.on( "connection", ( socket ) => {
+socket.on( "connection", ( socket ) => {
     console.log( socket );
 })
 
